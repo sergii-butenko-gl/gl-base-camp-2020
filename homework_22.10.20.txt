@@ -1,0 +1,1013 @@
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo
+$ git clone git@github.com:KryvenkoSergii/gl-base-camp-2020.git
+Cloning into 'gl-base-camp-2020'...
+remote: Enumerating objects: 23, done.
+remote: Counting objects: 100% (23/23), done.
+remote: Compressing objects: 100% (13/13), done.
+remote: Total 23 (delta 7), reused 17 (delta 4), pack-reused 0
+Receiving objects: 100% (23/23), done.
+Resolving deltas: 100% (7/7), done.
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo
+$ ch gl-base-camp-2020/
+bash: ch: command not found
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo
+$ cd gl-base-camp-2020/
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main)
+$ git add .
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main)
+$ git commit -m "add file merge-conflic.txt and add text"
+[main 41f8e9c] add file merge-conflic.txt and add text
+ 1 file changed, 4 insertions(+)
+ create mode 100644 merge-conflict.txt
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main)
+$ git checkout -b new_branch2
+Switched to a new branch 'new_branch2'
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch2)
+$ git add .
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch2)
+$ git commit -m "change file merge-conflict.txt: line 1"
+[new_branch2 d484f6c] change file merge-conflict.txt: line 1
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch2)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main)
+$ git checkout -b new_branch3
+Switched to a new branch 'new_branch3'
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch3)
+$ git commit -am "change file merge-conflict.txt: line 2"
+[new_branch3 3ec5cdd] change file merge-conflict.txt: line 2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch3)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main)
+$ git commit -am "change file merge-conflic.txt: line 1,3"
+[main 51d0533] change file merge-conflic.txt: line 1,3
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main)
+$ git log --oneline --decorate --graph --all
+* 51d0533 (HEAD -> main) change file merge-conflic.txt: line 1,3
+| * 3ec5cdd (new_branch3) change file merge-conflict.txt: line 2
+|/
+| * d484f6c (new_branch2) change file merge-conflict.txt: line 1
+|/
+* 41f8e9c add file merge-conflic.txt and add text
+| * 3319fcc (origin/new_branch) add another text
+|/
+* 9e4fcd4 (origin/main, origin/HEAD) delete hello2
+*   c236ec4 Merge branch 'main' of github.com:KryvenkoSergii/gl-base-camp-2020 into main
+|\
+| * bcf6e58 second commit
+* | 6e6c3fb change some ignore files
+* | 2168e75 third commit
+|/
+* fe002bf test
+* 2c5e9cb Initial commit
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main)
+$ git fetch
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main)
+$ git log --oneline --decorate --graph --all
+* 51d0533 (HEAD -> main) change file merge-conflic.txt: line 1,3
+| * 3ec5cdd (new_branch3) change file merge-conflict.txt: line 2
+|/
+| * d484f6c (new_branch2) change file merge-conflict.txt: line 1
+|/
+* 41f8e9c add file merge-conflic.txt and add text
+| * 3319fcc (origin/new_branch) add another text
+|/
+* 9e4fcd4 (origin/main, origin/HEAD) delete hello2
+*   c236ec4 Merge branch 'main' of github.com:KryvenkoSergii/gl-base-camp-2020 into main
+|\
+| * bcf6e58 second commit
+* | 6e6c3fb change some ignore files
+* | 2168e75 third commit
+|/
+* fe002bf test
+* 2c5e9cb Initial commit
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main)
+$ git merge new_branch2
+Auto-merging merge-conflict.txt
+CONFLICT (content): Merge conflict in merge-conflict.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main|MERGING)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   merge-conflict.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main|MERGING)
+$ git commit -am "merge main + new_branch2: change file merge-conflict 1 line"
+[main 46c2bff] merge main + new_branch2: change file merge-conflict 1 line
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main)
+$ git merge new_branch3
+Auto-merging merge-conflict.txt
+CONFLICT (content): Merge conflict in merge-conflict.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main|MERGING)
+$ git commit -am "merge main + new_branch3: change file merge-conflict.txt line 2"
+[main 91d2f8b] merge main + new_branch3: change file merge-conflict.txt line 2
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main)
+$ git push
+Enumerating objects: 19, done.
+Counting objects: 100% (19/19), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (18/18), done.
+Writing objects: 100% (18/18), 1.75 KiB | 596.00 KiB/s, done.
+Total 18 (delta 7), reused 0 (delta 0)
+remote: Resolving deltas: 100% (7/7), done.
+To github.com:KryvenkoSergii/gl-base-camp-2020.git
+   9e4fcd4..91d2f8b  main -> main
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main)
+$ git checkout new_branch
+Switched to a new branch 'new_branch'
+Branch 'new_branch' set up to track remote branch 'new_branch' from 'origin'.
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git commit -am "add 2 files: new_lile.txt, merge-conflict.txt"
+On branch new_branch
+Your branch is up to date with 'origin/new_branch'.
+
+Untracked files:
+        merge-conflict.txt
+        new_file.txt
+
+nothing added to commit but untracked files present
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git push
+Everything up-to-date
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git add .
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git commit -am "add 2 files: new_lile.txt, merge-conflict.txt"
+[new_branch e37ba34] add 2 files: new_lile.txt, merge-conflict.txt
+ 2 files changed, 8 insertions(+)
+ create mode 100644 merge-conflict.txt
+ create mode 100644 new_file.txt
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 521 bytes | 260.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To github.com:KryvenkoSergii/gl-base-camp-2020.git
+   3319fcc..e37ba34  new_branch -> new_branch
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git fetch
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git log --oneline --decorate --graph --all
+* e37ba34 (HEAD -> new_branch, origin/new_branch) add 2 files: new_lile.txt, merge-conflict.txt
+* 3319fcc add another text
+| *   91d2f8b (origin/main, origin/HEAD, main) merge main + new_branch3: change file merge-conflict.txt line 2
+| |\
+| | * 3ec5cdd (new_branch3) change file merge-conflict.txt: line 2
+| * |   46c2bff merge main + new_branch2: change file merge-conflict 1 line
+| |\ \
+| | * | d484f6c (new_branch2) change file merge-conflict.txt: line 1
+| | |/
+| * | 51d0533 change file merge-conflic.txt: line 1,3
+| |/
+| * 41f8e9c add file merge-conflic.txt and add text
+|/
+* 9e4fcd4 delete hello2
+*   c236ec4 Merge branch 'main' of github.com:KryvenkoSergii/gl-base-camp-2020 into main
+|\
+| * bcf6e58 second commit
+* | 6e6c3fb change some ignore files
+* | 2168e75 third commit
+|/
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git fetch
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From github.com:KryvenkoSergii/gl-base-camp-2020
+   e37ba34..c843812  new_branch -> origin/new_branch
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git log --oneline --decorate --graph --all
+*   c843812 (origin/new_branch) Merge branch 'main' into new_branch
+|\
+| *   91d2f8b (origin/main, origin/HEAD, main) merge main + new_branch3: change file merge-conflict.txt line 2
+| |\
+| | * 3ec5cdd (new_branch3) change file merge-conflict.txt: line 2
+| * |   46c2bff merge main + new_branch2: change file merge-conflict 1 line
+| |\ \
+| | * | d484f6c (new_branch2) change file merge-conflict.txt: line 1
+| | |/
+| * | 51d0533 change file merge-conflic.txt: line 1,3
+| |/
+| * 41f8e9c add file merge-conflic.txt and add text
+* | e37ba34 (HEAD -> new_branch) add 2 files: new_lile.txt, merge-conflict.txt
+* | 3319fcc add another text
+|/
+* 9e4fcd4 delete hello2
+*   c236ec4 Merge branch 'main' of github.com:KryvenkoSergii/gl-base-camp-2020 into main
+|\
+| * bcf6e58 second commit
+* | 6e6c3fb change some ignore files
+* | 2168e75 third commit
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main)
+$ git fetch
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main)
+$ git log --oneline --decorate --graph --all
+*   c843812 (origin/new_branch) Merge branch 'main' into new_branch
+|\
+| *   91d2f8b (HEAD -> main, origin/main, origin/HEAD) merge main + new_branch3: change file merge-conflict.txt line 2
+| |\
+| | * 3ec5cdd (new_branch3) change file merge-conflict.txt: line 2
+| * |   46c2bff merge main + new_branch2: change file merge-conflict 1 line
+| |\ \
+| | * | d484f6c (new_branch2) change file merge-conflict.txt: line 1
+| | |/
+| * | 51d0533 change file merge-conflic.txt: line 1,3
+| |/
+| * 41f8e9c add file merge-conflic.txt and add text
+* | e37ba34 (new_branch) add 2 files: new_lile.txt, merge-conflict.txt
+* | 3319fcc add another text
+|/
+* 9e4fcd4 delete hello2
+*   c236ec4 Merge branch 'main' of github.com:KryvenkoSergii/gl-base-camp-2020 into main
+|\
+| * bcf6e58 second commit
+* | 6e6c3fb change some ignore files
+* | 2168e75 third commit
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main)
+$ git merge new_branch
+CONFLICT (add/add): Merge conflict in merge-conflict.txt
+Auto-merging merge-conflict.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main|MERGING)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Changes to be committed:
+        new file:   new_file.txt
+        modified:   serge.txt
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both added:      merge-conflict.txt
+
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main|MERGING)
+$ git reset serge.txt
+Unstaged changes after reset:
+U       merge-conflict.txt
+M       serge.txt
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main|MERGING)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Changes to be committed:
+        new file:   new_file.txt
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both added:      merge-conflict.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   serge.txt
+
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main|MERGING)
+$ git reset merge-conflict.txt
+Unstaged changes after reset:
+M       merge-conflict.txt
+M       serge.txt
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main|MERGING)
+$ git statu
+git: 'statu' is not a git command. See 'git --help'.
+
+The most similar commands are
+        status
+        stage
+        stash
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main|MERGING)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        new file:   new_file.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   merge-conflict.txt
+        modified:   serge.txt
+
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main|MERGING)
+$ git add serge.txt
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main|MERGING)
+$ git commit -m "add file serge.txt from new_branch"
+[main 9c001a0] add file serge.txt from new_branch
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main)
+$ git add .
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main)
+$ git commit -am "merge main + new_branch: change merge-conflict.txt file"
+[main 916f2a8] merge main + new_branch: change merge-conflict.txt file
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main)
+$ git ststus
+git: 'ststus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main)
+$ git push
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 625 bytes | 625.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To github.com:KryvenkoSergii/gl-base-camp-2020.git
+   91d2f8b..916f2a8  main -> main
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main)
+$ git checkout new_branch2
+Switched to branch 'new_branch2'
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch2)
+$ git status
+On branch new_branch2
+nothing to commit, working tree clean
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch2)
+$ git push
+fatal: The current branch new_branch2 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin new_branch2
+
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch2)
+$ git push --set-upstream origin new_branch2
+bash: $'\302\203git': command not found
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch2)
+$ git push --set-upstream origin new_branch2
+Total 0 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'new_branch2' on GitHub by visiting:
+remote:      https://github.com/KryvenkoSergii/gl-base-camp-2020/pull/new/new_branch2
+remote:
+To github.com:KryvenkoSergii/gl-base-camp-2020.git
+ * [new branch]      new_branch2 -> new_branch2
+Branch 'new_branch2' set up to track remote branch 'new_branch2' from 'origin'.
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch2)
+$ git checkout new_branch3
+Switched to branch 'new_branch3'
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch3)
+$ git push --set-upstream origin new_branch3
+Total 0 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'new_branch3' on GitHub by visiting:
+remote:      https://github.com/KryvenkoSergii/gl-base-camp-2020/pull/new/new_branch3
+remote:
+To github.com:KryvenkoSergii/gl-base-camp-2020.git
+ * [new branch]      new_branch3 -> new_branch3
+Branch 'new_branch3' set up to track remote branch 'new_branch3' from 'origin'.
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch3)
+$ git fetch
+remote: Enumerating objects: 12, done.
+remote: Counting objects: 100% (12/12), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 9 (delta 4), reused 8 (delta 3), pack-reused 0
+Unpacking objects: 100% (9/9), done.
+From github.com:KryvenkoSergii/gl-base-camp-2020
+ * [new branch]      us_123_new_test  -> origin/us_123_new_test
+ * [new branch]      us_123_new_test2 -> origin/us_123_new_test2
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch3)
+$ git push --set-upstream origin new_branch3
+Everything up-to-date
+Branch 'new_branch3' set up to track remote branch 'new_branch3' from 'origin'.
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch3)
+$ git log --oneline --decorate --graph --all
+* 60eea66 (origin/us_123_new_test) change file new_file.txt
+* 2c1b544 added text in serge.txt
+| * 8570cee (origin/us_123_new_test2) modify file serge.txt
+|/
+* 916f2a8 (origin/main, origin/HEAD, main) merge main + new_branch: change merge-conflict.txt file
+*   9c001a0 add file serge.txt from new_branch
+|\
+| | *   c843812 (origin/new_branch) Merge branch 'main' into new_branch
+| | |\
+| |/ /
+| | /
+| |/
+|/|
+* |   91d2f8b merge main + new_branch3: change file merge-conflict.txt line 2
+|\ \
+| * | 3ec5cdd (HEAD -> new_branch3, origin/new_branch3) change file merge-conflict.txt: line 2
+* | |   46c2bff merge main + new_branch2: change file merge-conflict 1 line
+|\ \ \
+| * | | d484f6c (origin/new_branch2, new_branch2) change file merge-conflict.txt: line 1
+| |/ /
+* | | 51d0533 change file merge-conflic.txt: line 1,3
+|/ /
+* | 41f8e9c add file merge-conflic.txt and add text
+| * e37ba34 (new_branch) add 2 files: new_lile.txt, merge-conflict.txt
+| * 3319fcc add another text
+|/
+* 9e4fcd4 delete hello2
+*   c236ec4 Merge branch 'main' of github.com:KryvenkoSergii/gl-base-camp-2020 into main
+|\
+| * bcf6e58 second commit
+* | 6e6c3fb change some ignore files
+* | 2168e75 third commit
+|/
+* fe002bf test
+* 2c5e9cb Initial commit
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch3)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (main)
+$ git checkout new_branch
+Switched to branch 'new_branch'
+Your branch is behind 'origin/new_branch' by 7 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git checkout us_123_new_test
+Switched to a new branch 'us_123_new_test'
+Branch 'us_123_new_test' set up to track remote branch 'us_123_new_test' from 'origin'.
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (us_123_new_test)
+$ git checkout new_branch
+Switched to branch 'new_branch'
+Your branch is behind 'origin/new_branch' by 7 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git merge us_123_new_test
+Updating e37ba34..60eea66
+Fast-forward
+ merge-conflict.txt | 8 ++++----
+ new_file.txt       | 5 +++--
+ serge.txt          | 2 +-
+ 3 files changed, 8 insertions(+), 7 deletions(-)
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git status
+On branch new_branch
+Your branch and 'origin/new_branch' have diverged,
+and have 4 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+nothing to commit, working tree clean
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git push
+To github.com:KryvenkoSergii/gl-base-camp-2020.git
+ ! [rejected]        new_branch -> new_branch (non-fast-forward)
+error: failed to push some refs to 'git@github.com:KryvenkoSergii/gl-base-camp-2020.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git pull
+Auto-merging merge-conflict.txt
+CONFLICT (content): Merge conflict in merge-conflict.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch|MERGING)
+$ git status
+On branch new_branch
+Your branch and 'origin/new_branch' have diverged,
+and have 4 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   merge-conflict.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch|MERGING)
+$ git commit -am "merge new_branch and us_123_test"
+[new_branch a38b914] merge new_branch and us_123_test
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git status
+On branch new_branch
+Your branch is ahead of 'origin/new_branch' by 5 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git push
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 239 bytes | 239.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To github.com:KryvenkoSergii/gl-base-camp-2020.git
+   c843812..a38b914  new_branch -> new_branch
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git fetch
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 3 (delta 1), reused 3 (delta 1), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From github.com:KryvenkoSergii/gl-base-camp-2020
+   60eea66..f974936  us_123_new_test -> origin/us_123_new_test
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git log --oneline --decorate --graph --all
+* f974936 (origin/us_123_new_test) added test_login
+| *   a38b914 (HEAD -> new_branch, origin/new_branch) merge new_branch and us_123_test
+| |\
+|/ /
+| *   c843812 Merge branch 'main' into new_branch
+| |\
+* | | 60eea66 (us_123_new_test) change file new_file.txt
+* | | 2c1b544 added text in serge.txt
+| | | * 8570cee (origin/us_123_new_test2) modify file serge.txt
+| |_|/
+|/| |
+* | | 916f2a8 (origin/main, origin/HEAD, main) merge main + new_branch: change merge-conflict.txt file
+* | |   9c001a0 add file serge.txt from new_branch
+|\ \ \
+| |/ /
+| | /
+| |/
+|/|
+| * e37ba34 add 2 files: new_lile.txt, merge-conflict.txt
+| * 3319fcc add another text
+* |   91d2f8b merge main + new_branch3: change file merge-conflict.txt line 2
+|\ \
+| * | 3ec5cdd (origin/new_branch3, new_branch3) change file merge-conflict.txt: line 2
+* | |   46c2bff merge main + new_branch2: change file merge-conflict 1 line
+|\ \ \
+| * | | d484f6c (origin/new_branch2, new_branch2) change file merge-conflict.txt: line 1
+| |/ /
+* | | 51d0533 change file merge-conflic.txt: line 1,3
+|/ /
+* | 41f8e9c add file merge-conflic.txt and add text
+|/
+* 9e4fcd4 delete hello2
+*   c236ec4 Merge branch 'main' of github.com:KryvenkoSergii/gl-base-camp-2020 into main
+|\
+| * bcf6e58 second commit
+* | 6e6c3fb change some ignore files
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git merge us_123_new_test
+Already up to date.
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ ls
+merge-conflict.txt  new_file.txt  README.md  serge.txt
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git checkout us_123_new_test
+Switched to branch 'us_123_new_test'
+Your branch is behind 'origin/us_123_new_test' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (us_123_new_test)
+$ git checkout new_branch
+Switched to branch 'new_branch'
+Your branch is up to date with 'origin/new_branch'.
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ ls
+merge-conflict.txt  new_file.txt  README.md  serge.txt
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git log --oneline --decorate --graph --all
+* f974936 (origin/us_123_new_test) added test_login
+| *   a38b914 (HEAD -> new_branch, origin/new_branch) merge new_branch and us_123_test
+| |\
+|/ /
+| *   c843812 Merge branch 'main' into new_branch
+| |\
+* | | 60eea66 (us_123_new_test) change file new_file.txt
+* | | 2c1b544 added text in serge.txt
+| | | * 8570cee (origin/us_123_new_test2) modify file serge.txt
+| |_|/
+|/| |
+* | | 916f2a8 (origin/main, origin/HEAD, main) merge main + new_branch: change merge-conflict.txt file
+* | |   9c001a0 add file serge.txt from new_branch
+|\ \ \
+| |/ /
+| | /
+| |/
+|/|
+| * e37ba34 add 2 files: new_lile.txt, merge-conflict.txt
+| * 3319fcc add another text
+* |   91d2f8b merge main + new_branch3: change file merge-conflict.txt line 2
+|\ \
+| * | 3ec5cdd (origin/new_branch3, new_branch3) change file merge-conflict.txt: line 2
+* | |   46c2bff merge main + new_branch2: change file merge-conflict 1 line
+|\ \ \
+| * | | d484f6c (origin/new_branch2, new_branch2) change file merge-conflict.txt: line 1
+| |/ /
+* | | 51d0533 change file merge-conflic.txt: line 1,3
+|/ /
+* | 41f8e9c add file merge-conflic.txt and add text
+|/
+* 9e4fcd4 delete hello2
+*   c236ec4 Merge branch 'main' of github.com:KryvenkoSergii/gl-base-camp-2020 into main
+|\
+| * bcf6e58 second commit
+* | 6e6c3fb change some ignore files
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git checkout us_123_new_test
+Switched to branch 'us_123_new_test'
+Your branch is behind 'origin/us_123_new_test' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (us_123_new_test)
+$ git pull
+Updating 60eea66..f974936
+Fast-forward
+ test_login.py | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 test_login.py
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (us_123_new_test)
+$ ls
+merge-conflict.txt  new_file.txt  README.md  serge.txt  test_login.py
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (us_123_new_test)
+$ git status
+On branch us_123_new_test
+Your branch is up to date with 'origin/us_123_new_test'.
+
+nothing to commit, working tree clean
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (us_123_new_test)
+$ git push
+Everything up-to-date
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (us_123_new_test)
+$ git log --oneline --decorate --graph --all
+* f974936 (HEAD -> us_123_new_test, origin/us_123_new_test) added test_login
+| *   a38b914 (origin/new_branch, new_branch) merge new_branch and us_123_test
+| |\
+|/ /
+| *   c843812 Merge branch 'main' into new_branch
+| |\
+* | | 60eea66 change file new_file.txt
+* | | 2c1b544 added text in serge.txt
+| | | * 8570cee (origin/us_123_new_test2) modify file serge.txt
+| |_|/
+|/| |
+* | | 916f2a8 (origin/main, origin/HEAD, main) merge main + new_branch: change merge-conflict.txt file
+* | |   9c001a0 add file serge.txt from new_branch
+|\ \ \
+| |/ /
+| | /
+| |/
+|/|
+| * e37ba34 add 2 files: new_lile.txt, merge-conflict.txt
+| * 3319fcc add another text
+* |   91d2f8b merge main + new_branch3: change file merge-conflict.txt line 2
+|\ \
+| * | 3ec5cdd (origin/new_branch3, new_branch3) change file merge-conflict.txt: line 2
+* | |   46c2bff merge main + new_branch2: change file merge-conflict 1 line
+|\ \ \
+| * | | d484f6c (origin/new_branch2, new_branch2) change file merge-conflict.txt: line 1
+| |/ /
+* | | 51d0533 change file merge-conflic.txt: line 1,3
+|/ /
+* | 41f8e9c add file merge-conflic.txt and add text
+|/
+* 9e4fcd4 delete hello2
+*   c236ec4 Merge branch 'main' of github.com:KryvenkoSergii/gl-base-camp-2020 into main
+|\
+| * bcf6e58 second commit
+* | 6e6c3fb change some ignore files
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (us_123_new_test)
+$ git checkout new_branch
+Switched to branch 'new_branch'
+Your branch is up to date with 'origin/new_branch'.
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git merge us_123_new_test
+Merge made by the 'recursive' strategy.
+ test_login.py | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 test_login.py
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git log --oneline --decorate --graph --all
+*   32d6274 (HEAD -> new_branch) Merge branch 'us_123_new_test' into new_branch
+|\
+| * f974936 (origin/us_123_new_test, us_123_new_test) added test_login
+* |   a38b914 (origin/new_branch) merge new_branch and us_123_test
+|\ \
+| |/
+|/|
+| *   c843812 Merge branch 'main' into new_branch
+| |\
+* | | 60eea66 change file new_file.txt
+* | | 2c1b544 added text in serge.txt
+| | | * 8570cee (origin/us_123_new_test2) modify file serge.txt
+| |_|/
+|/| |
+* | | 916f2a8 (origin/main, origin/HEAD, main) merge main + new_branch: change merge-conflict.txt file
+* | |   9c001a0 add file serge.txt from new_branch
+|\ \ \
+| |/ /
+| | /
+| |/
+|/|
+| * e37ba34 add 2 files: new_lile.txt, merge-conflict.txt
+| * 3319fcc add another text
+* |   91d2f8b merge main + new_branch3: change file merge-conflict.txt line 2
+|\ \
+| * | 3ec5cdd (origin/new_branch3, new_branch3) change file merge-conflict.txt: line 2
+* | |   46c2bff merge main + new_branch2: change file merge-conflict 1 line
+|\ \ \
+| * | | d484f6c (origin/new_branch2, new_branch2) change file merge-conflict.txt: line 1
+| |/ /
+* | | 51d0533 change file merge-conflic.txt: line 1,3
+|/ /
+* | 41f8e9c add file merge-conflic.txt and add text
+|/
+* 9e4fcd4 delete hello2
+*   c236ec4 Merge branch 'main' of github.com:KryvenkoSergii/gl-base-camp-2020 into main
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git merge us_123_new_test2
+merge: us_123_new_test2 - not something we can merge
+
+Did you mean this?
+        origin/us_123_new_test2
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git log --oneline --decorate --graph --all
+*   32d6274 (HEAD -> new_branch) Merge branch 'us_123_new_test' into new_branch
+|\
+| * f974936 (origin/us_123_new_test, us_123_new_test) added test_login
+* |   a38b914 (origin/new_branch) merge new_branch and us_123_test
+|\ \
+| |/
+|/|
+| *   c843812 Merge branch 'main' into new_branch
+| |\
+* | | 60eea66 change file new_file.txt
+* | | 2c1b544 added text in serge.txt
+| | | * 8570cee (origin/us_123_new_test2) modify file serge.txt
+| |_|/
+|/| |
+* | | 916f2a8 (origin/main, origin/HEAD, main) merge main + new_branch: change merge-conflict.txt file
+* | |   9c001a0 add file serge.txt from new_branch
+|\ \ \
+| |/ /
+| | /
+| |/
+|/|
+| * e37ba34 add 2 files: new_lile.txt, merge-conflict.txt
+| * 3319fcc add another text
+* |   91d2f8b merge main + new_branch3: change file merge-conflict.txt line 2
+|\ \
+| * | 3ec5cdd (origin/new_branch3, new_branch3) change file merge-conflict.txt: line 2
+* | |   46c2bff merge main + new_branch2: change file merge-conflict 1 line
+|\ \ \
+| * | | d484f6c (origin/new_branch2, new_branch2) change file merge-conflict.txt: line 1
+| |/ /
+* | | 51d0533 change file merge-conflic.txt: line 1,3
+|/ /
+* | 41f8e9c add file merge-conflic.txt and add text
+|/
+* 9e4fcd4 delete hello2
+*   c236ec4 Merge branch 'main' of github.com:KryvenkoSergii/gl-base-camp-2020 into main
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git push
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 249 bytes | 249.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To github.com:KryvenkoSergii/gl-base-camp-2020.git
+   a38b914..32d6274  new_branch -> new_branch
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git status
+On branch new_branch
+Your branch is up to date with 'origin/new_branch'.
+
+nothing to commit, working tree clean
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git pull
+Already up to date.
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git merge us_123_new_test2
+merge: us_123_new_test2 - not something we can merge
+
+Did you mean this?
+        origin/us_123_new_test2
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git merge origin/us_123_new_test2
+Auto-merging serge.txt
+CONFLICT (content): Merge conflict in serge.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch|MERGING)
+$ git status
+On branch new_branch
+Your branch is up to date with 'origin/new_branch'.
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   serge.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch|MERGING)
+$ git commit -am "merge us_123_test2 into new_branch: change file serge.txt"
+[new_branch 8b2a6b8] merge us_123_test2 into new_branch: change file serge.txt
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git status
+On branch new_branch
+Your branch is ahead of 'origin/new_branch' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 397 bytes | 397.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:KryvenkoSergii/gl-base-camp-2020.git
+   32d6274..8b2a6b8  new_branch -> new_branch
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
+$ git log --oneline --decorate --graph --all
+*   8b2a6b8 (HEAD -> new_branch, origin/new_branch) merge us_123_test2 into new_branch: change file serge.txt
+|\
+| * 8570cee (origin/us_123_new_test2) modify file serge.txt
+* |   32d6274 Merge branch 'us_123_new_test' into new_branch
+|\ \
+| * | f974936 (origin/us_123_new_test, us_123_new_test) added test_login
+* | |   a38b914 merge new_branch and us_123_test
+|\ \ \
+| |/ /
+|/| |
+| * |   c843812 Merge branch 'main' into new_branch
+| |\ \
+* | | | 60eea66 change file new_file.txt
+* | | | 2c1b544 added text in serge.txt
+| |_|/
+|/| |
+* | | 916f2a8 (origin/main, origin/HEAD, main) merge main + new_branch: change merge-conflict.txt file
+* | |   9c001a0 add file serge.txt from new_branch
+|\ \ \
+| |/ /
+| | /
+| |/
+|/|
+| * e37ba34 add 2 files: new_lile.txt, merge-conflict.txt
+| * 3319fcc add another text
+* |   91d2f8b merge main + new_branch3: change file merge-conflict.txt line 2
+|\ \
+| * | 3ec5cdd (origin/new_branch3, new_branch3) change file merge-conflict.txt: line 2
+* | |   46c2bff merge main + new_branch2: change file merge-conflict 1 line
+|\ \ \
+| * | | d484f6c (origin/new_branch2, new_branch2) change file merge-conflict.txt: line 1
+| |/ /
+* | | 51d0533 change file merge-conflic.txt: line 1,3
+|/ /
+* | 41f8e9c add file merge-conflic.txt and add text
+|/
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/09. 22.10.20_GIT2/repo/gl-base-camp-2020 (new_branch)
