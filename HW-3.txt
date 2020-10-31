@@ -1,0 +1,60 @@
+-------------1-------------
+Home@Home--- MINGW64 /d/gl-bc-2020/hw_3 (main)
+$ mkdir -p f1/f2/f3/f4/f5/f6/
+
+Home@Home--- MINGW64 /d/gl-bc-2020/hw_3 (main)
+$ cd f1
+
+Home@Home--- MINGW64 /d/gl-bc-2020/hw_3/f1 (main)
+$ touch text_file1.txt
+
+Home@Home--- MINGW64 /d/gl-bc-2020/hw_3/f1 (main)
+$ cp /d/gl-bc-2020/hw_3/f1/text_file1.txt /d/gl-bc-2020/hw_3/f1/f2/f3/f4/f5/f6/
+
+Home@Home--- MINGW64 /d/gl-bc-2020/hw_3/f1 (main)
+$ cd
+
+Home@Home--- MINGW64 ~ (main)
+$ rm /d/gl-bc-2020/hw_3/f1/f2/f3/f4/f5/f6/text_file1.txt
+------------2---------------
+Home@Home--- MINGW64 ~ (main)
+$ 2>error.txt
+------------3---------------
+Home@Home--- MINGW64 ~ (main)
+$ >&error2.txt
+------------4---------------
+Home@Home--- MINGW64 ~ (main)
+$ vi root.txt
+
+Home@Home--- MINGW64 ~ (main)
+$ ls -l root.txt
+-rw-r--r-- 1 Home 197121 21 окт 30 12:05 root.txt
+
+Home@Home--- MINGW64 ~ (main)
+$ chmod 441 root.txt
+
+Home@Home--- MINGW64 ~ (main)
+$ ls -l root.txt
+-r--r--r-- 1 Home 197121 21 окт 30 12:05 root.txt
+------------5---------------
+Home@Home--- MINGW64 /d/gl-bc-2020/hw_3/f1 (main)
+$ rm non_file || echo cmd1 failed
+rm: cannot remove 'non_file': No such file or directory
+cmd1 failed
+------------6---------------
+Home@Home--- MINGW64 /d/gl-bc-2020/hw_3/f1 (main)
+$ rm error2.txt && echo cmd1 succesful
+cmd1 succesful
+
+Home@Home--- MINGW64 /d/gl-bc-2020/hw_3/f1 (main)
+$ ls
+error.txt  f2/  text_file1.txt
+------------7--------------(I changed working station.This exersise was finished on virtual machine)
+home@home-virtual-machine:~/f1$ touch script.sh
+home@home-virtual-machine:~/f1$ echo -e echo "You are now in:\npwd">>script.sh
+home@home-virtual-machine:~/f1$ chmod +x script.sh
+home@home-virtual-machine:~/f1$ ./script.sh
+You are now in:
+/home/home/f1
+home@home-virtual-machine:~/f1$ 
+
