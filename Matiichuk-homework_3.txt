@@ -1,0 +1,62 @@
+solomia@solomia-VirtualBox ~> mkdir -p ~/f1/f2/f3/f4/f5/f6
+solomia@solomia-VirtualBox ~> cd f1
+solomia@solomia-VirtualBox ~/f1> touch new_file.txt
+solomia@solomia-VirtualBox ~/f1> vim new_file.txt 
+solomia@solomia-VirtualBox ~/f1> cat new_file.txt 
+Some information
+solomia@solomia-VirtualBox ~/f1> cp new_file.txt f2/f3/f4/f5/f6/
+solomia@solomia-VirtualBox ~/f1> cd
+solomia@solomia-VirtualBox ~> find ~/f1/f2 -name "*.txt" -delete
+
+solomia@solomia-VirtualBox ~> cd ~/f1
+solomia@solomia-VirtualBox ~/f1> cat new_file.txt some_not_exist_file
+Some information
+cat: some_not_exist_file: No such file or directory
+solomia@solomia-VirtualBox ~/f1 [1]> cat new_file.txt some_not_exist_file 2> error.txt
+Some information
+solomia@solomia-VirtualBox ~/f1 [1]> cat error.txt 
+cat: some_not_exist_file: No such file or directory
+solomia@solomia-VirtualBox ~/f1> cat new_file.txt some_not_exist_file > error.txt 2>&1
+solomia@solomia-VirtualBox ~/f1 [1]> cat error.txt
+Some information
+cat: some_not_exist_file: No such file or directory
+
+solomia@solomia-VirtualBox ~/f1> touch file.txt
+solomia@solomia-VirtualBox ~/f1> ls -la
+total 20
+drwxrwxr-x  3 solomia solomia 4096 лис  1 00:35 ./
+drwxr-xr-x 21 solomia solomia 4096 жов 31 23:40 ../
+-rw-rw-r--  1 solomia solomia   69 лис  1 00:29 error.txt
+drwxrwxr-x  3 solomia solomia 4096 жов 31 23:34 f2/
+-rw-rw-r--  1 solomia solomia    0 лис  1 00:35 file.txt
+-rw-rw-r--  1 solomia solomia   17 жов 31 23:40 new_file.txt
+solomia@solomia-VirtualBox ~/f1> sudo chown root file.txt
+[sudo] password for solomia: 
+solomia@solomia-VirtualBox ~/f1> ls -la
+total 20
+drwxrwxr-x  3 solomia solomia 4096 лис  1 00:35 ./
+drwxr-xr-x 21 solomia solomia 4096 жов 31 23:40 ../
+-rw-rw-r--  1 solomia solomia   69 лис  1 00:29 error.txt
+drwxrwxr-x  3 solomia solomia 4096 жов 31 23:34 f2/
+-rw-rw-r--  1 root    solomia    0 лис  1 00:35 file.txt
+-rw-rw-r--  1 solomia solomia   17 жов 31 23:40 new_file.txt
+solomia@solomia-VirtualBox ~/f1 [1]> sudo chmod +x file.txt
+solomia@solomia-VirtualBox ~/f1> ls -la
+total 20
+drwxrwxr-x  3 solomia solomia 4096 лис  1 00:35 ./
+drwxr-xr-x 21 solomia solomia 4096 жов 31 23:40 ../
+-rw-rw-r--  1 solomia solomia   69 лис  1 00:29 error.txt
+drwxrwxr-x  3 solomia solomia 4096 жов 31 23:34 f2/
+-rwxrwxr-x  1 root    solomia    0 лис  1 00:35 file.txt*
+-rw-rw-r--  1 solomia solomia   17 жов 31 23:40 new_file.txt
+
+solomia@solomia-VirtualBox ~/f1> cat aijfoajo || echo "cmd1 fails"
+cat: aijfoajo: No such file or directory
+cmd1 fails
+solomia@solomia-VirtualBox ~/f1> cat file.txt && echo "cmd1 successful"
+cmd1 successful
+
+solomia@solomia-VirtualBox ~/f1> echo pwd > file2.sh
+solomia@solomia-VirtualBox ~/f1> chmod +x file2.sh
+solomia@solomia-VirtualBox ~/f1> sh ./file2.sh
+/home/solomia/f1
