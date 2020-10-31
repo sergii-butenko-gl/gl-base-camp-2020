@@ -1,0 +1,83 @@
+solomia@solomia-VirtualBox ~> 
+git clone git@github.com:SolomiiaMatiichuk/gl-base-camp-2020.git
+Cloning into 'gl-base-camp-2020'...
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (4/4), done.
+
+solomia@solomia-VirtualBox ~> cd gl-base-camp-2020
+
+solomia@solomia-VirtualBox ~/gl-base-camp-2020 (main)> git checkout -b matiichuk_branch
+Switched to a new branch 'matiichuk_branch'
+
+solomia@solomia-VirtualBox ~/gl-base-camp-2020 (matiichuk_branch)> touch merge_conflict_file
+solomia@solomia-VirtualBox ~/gl-base-camp-2020 (matiichuk_branch)> git add .
+solomia@solomia-VirtualBox ~/gl-base-camp-2020 (matiichuk_branch)> git commit -m "created merge_conflict_file"
+[matiichuk_branch 5958055] created merge_conflict_file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 merge_conflict_file
+
+solomia@solomia-VirtualBox ~/gl-base-camp-2020 (matiichuk_branch)> git checkout -b user1
+Switched to a new branch 'user1'
+
+solomia@solomia-VirtualBox ~/gl-base-camp-2020 (user1)> vim merge_conflict_file
+solomia@solomia-VirtualBox ~/gl-base-camp-2020 (user1)> git add .
+solomia@solomia-VirtualBox ~/gl-base-camp-2020 (user1)> git commit -m "modified merfe_conflict_file by user1"
+[user1 e3f5a48] modified merfe_conflict_file by user1
+ 1 file changed, 1 insertion(+)
+
+solomia@solomia-VirtualBox ~/gl-base-camp-2020 (user1)> git log --oneline --decorate --graph --all
+* e3f5a48 (HEAD -> user1) modified merfe_conflict_file by user1
+* 5958055 (matiichuk_branch) created merge_conflict_file
+* d8555b4 (origin/main, origin/HEAD, main) Initial commit
+
+solomia@solomia-VirtualBox ~/gl-base-camp-2020 (user1)> git checkout matiichuk_branch
+Switched to branch 'matiichuk_branch'
+
+solomia@solomia-VirtualBox ~/gl-base-camp-2020 (matiichuk_branch)> git checkout -b user2
+Switched to a new branch 'user2'
+
+solomia@solomia-VirtualBox ~/gl-base-camp-2020 (user2)> vim merge_conflict_file
+solomia@solomia-VirtualBox ~/gl-base-camp-2020 (user2)> git add .
+solomia@solomia-VirtualBox ~/gl-base-camp-2020 (user2)> git commit -m "modified merfe_conflict_file by user2"
+[user2 ede4936] modified merfe_conflict_file by user2
+ 1 file changed, 1 insertion(+)
+
+solomia@solomia-VirtualBox ~/gl-base-camp-2020 (user2)> git log --oneline --decorate --graph --all
+* ede4936 (HEAD -> user2) modified merfe_conflict_file by user2
+| * e3f5a48 (user1) modified merfe_conflict_file by user1
+|/  
+* 5958055 (matiichuk_branch) created merge_conflict_file
+* d8555b4 (origin/main, origin/HEAD, main) Initial commit
+
+solomia@solomia-VirtualBox ~/gl-base-camp-2020 (user2)> git merge user1
+Auto-merging merge_conflict_file
+CONFLICT (content): Merge conflict in merge_conflict_file
+Automatic merge failed; fix conflicts and then commit the result.
+
+solomia@solomia-VirtualBox ~/gl-base-camp-2020 (user2|MERGING) [1]> vim merge_conflict_file
+solomia@solomia-VirtualBox ~/gl-base-camp-2020 (user2|MERGING)> git add .
+solomia@solomia-VirtualBox ~/gl-base-camp-2020 (user2|MERGING)> 
+git commit -m "fixed merge conflict in merge_conflict_file"
+[user2 916c58e] fixed merge conflict in merge_conflict_file
+
+solomia@solomia-VirtualBox ~/gl-base-camp-2020 (user2)> git log --oneline --decorate --graph --all
+*   916c58e (HEAD -> user2) fixed merge conflict in merge_conflict_file
+|\  
+| * e3f5a48 (user1) modified merfe_conflict_file by user1
+* | ede4936 modified merfe_conflict_file by user2
+|/  
+* 5958055 (matiichuk_branch) created merge_conflict_file
+* d8555b4 (origin/main, origin/HEAD, main) Initial commit
+
+solomia@solomia-VirtualBox ~/gl-base-camp-2020 (homework_2)> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+solomia@solomia-VirtualBox ~/gl-base-camp-2020 (main)> git checkout -b Matiichuk_homework_2
+Switched to a new branch 'Matiichuk_homework_2'
+solomia@solomia-VirtualBox ~/gl-base-camp-2020 (Matiichuk_homework_2)> 
+touch Matiichuk-homework_2.txt
+solomia@solomia-VirtualBox ~/gl-base-camp-2020 (Matiichuk_homework_2)> vim Matiichuk-homework_2.txt
+ 
