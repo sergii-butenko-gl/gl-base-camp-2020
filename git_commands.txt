@@ -1,0 +1,7 @@
+(main) -> git checkout -b new_branch
+(new_branch) -> git add test_math.py
+(new branch) -> git commit -am "add text for initial file"
+(new_branch) -> git checkout main
+(main) -> git add test_math.py
+(main) -> git commit -am "Updated text"
+(main) -> git commit -am "Resolved conflict"
