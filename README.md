@@ -1,2 +1,2 @@
 # gl-base-camp-2020
-added some text under "skryvenko-hw1-merge-conflict" before merge
+some text under "skryvenko-hw1-merge-conflict" after merging with "skryvenko-hw1-merge-conflict2"
