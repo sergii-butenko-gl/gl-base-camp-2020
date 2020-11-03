@@ -1,0 +1,163 @@
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/11. 29.10.20_Selenium/Sel1
+$ git clone git@github.com:KryvenkoSergii/gl-base-camp-2021.git
+Cloning into 'gl-base-camp-2021'...
+remote: Enumerating objects: 67, done.
+remote: Counting objects: 100% (67/67), done.
+remote: Compressing objects: 100% (58/58), done.
+remote: Total 67 (delta 6), reused 60 (delta 2), pack-reused 0
+Receiving objects: 100% (67/67), 411.97 KiB | 742.00 KiB/s, done.
+Resolving deltas: 100% (6/6), done.
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/11. 29.10.20_Selenium/Sel1
+$ git checkout -b "skryvenko-hw1-merge-conflict"
+fatal: not a git repository (or any of the parent directories): .git
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/11. 29.10.20_Selenium/Sel1
+$ ls
+gl-base-camp-2021/
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/11. 29.10.20_Selenium/Sel1
+$ ls gl-base-camp-2021/
+README.md
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/11. 29.10.20_Selenium/Sel1
+$ git checkout -b "skryvenko-hw1-merge-conflict"
+fatal: not a git repository (or any of the parent directories): .git
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/11. 29.10.20_Selenium/Sel1
+$ cd gl-base-camp-2021/
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/11. 29.10.20_Selenium/Sel1/gl-base-camp-2021 (main)
+$ git checkout -b "skryvenko-hw1-merge-conflict"
+Switched to a new branch 'skryvenko-hw1-merge-conflict'
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/11. 29.10.20_Selenium/Sel1/gl-base-camp-2021 (skryvenko-hw1-merge-conflict)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/11. 29.10.20_Selenium/Sel1/gl-base-camp-2021 (main)
+$ git add .
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/11. 29.10.20_Selenium/Sel1/gl-base-camp-2021 (main)
+$ git commit -m "change readme file"
+[main 20995c7] change readme file
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/11. 29.10.20_Selenium/Sel1/gl-base-camp-2021 (main)
+$ git checkout skryvenko-hw1-merge-conflict
+Switched to branch 'skryvenko-hw1-merge-conflict'
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/11. 29.10.20_Selenium/Sel1/gl-base-camp-2021 (skryvenko-hw1-merge-conflict)
+$ git status
+On branch skryvenko-hw1-merge-conflict
+nothing to commit, working tree clean
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/11. 29.10.20_Selenium/Sel1/gl-base-camp-2021 (skryvenko-hw1-merge-conflict)
+$ git checkout main
+bash: $'\302\203git': command not found
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/11. 29.10.20_Selenium/Sel1/gl-base-camp-2021 (skryvenko-hw1-merge-conflict)
+$ git checkout main
+error: Your local changes to the following files would be overwritten by checkout:
+        README.md
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/11. 29.10.20_Selenium/Sel1/gl-base-camp-2021 (skryvenko-hw1-merge-conflict)
+$ git add .
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/11. 29.10.20_Selenium/Sel1/gl-base-camp-2021 (skryvenko-hw1-merge-conflict)
+$ git commit -m "change readme file before merge"
+[skryvenko-hw1-merge-conflict 0cfe4ba] change readme file before merge
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/11. 29.10.20_Selenium/Sel1/gl-base-camp-2021 (skryvenko-hw1-merge-conflict)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/11. 29.10.20_Selenium/Sel1/gl-base-camp-2021 (main)
+$ git checkout -b "skryvenko-hw1-merge-conflict2"
+Switched to a new branch 'skryvenko-hw1-merge-conflict2'
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/11. 29.10.20_Selenium/Sel1/gl-base-camp-2021 (skryvenko-hw1-merge-conflict2)
+$ git add .
+bash: $'\302\203git': command not found
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/11. 29.10.20_Selenium/Sel1/gl-base-camp-2021 (skryvenko-hw1-merge-conflict2)
+$ git status
+On branch skryvenko-hw1-merge-conflict2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/11. 29.10.20_Selenium/Sel1/gl-base-camp-2021 (skryvenko-hw1-merge-conflict2)
+$ git add .
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/11. 29.10.20_Selenium/Sel1/gl-base-camp-2021 (skryvenko-hw1-merge-conflict2)
+$ git commit -m "changed readme file before merge"
+[skryvenko-hw1-merge-conflict2 9d41e9d] changed readme file before merge
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/11. 29.10.20_Selenium/Sel1/gl-base-camp-2021 (skryvenko-hw1-merge-conflict2)
+$ git checkout skryvenko-hw1-merge-conflict
+Switched to branch 'skryvenko-hw1-merge-conflict'
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/11. 29.10.20_Selenium/Sel1/gl-base-camp-2021 (skryvenko-hw1-merge-conflict)
+$ git merge skryvenko-hw1-merge-conflict2
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/11. 29.10.20_Selenium/Sel1/gl-base-camp-2021 (skryvenko-hw1-merge-conflict|MERGING)
+$ git status
+On branch skryvenko-hw1-merge-conflict
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/11. 29.10.20_Selenium/Sel1/gl-base-camp-2021 (skryvenko-hw1-merge-conflict|MERGING)
+$ git add .
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/11. 29.10.20_Selenium/Sel1/gl-base-camp-2021 (skryvenko-hw1-merge-conflict|MERGING)
+$ git commit -m "edited readme file after merging"
+[skryvenko-hw1-merge-conflict e4136af] edited readme file after merging
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/11. 29.10.20_Selenium/Sel1/gl-base-camp-2021 (skryvenko-hw1-merge-conflict)
+$ git log --online --decorate --graph --all
+fatal: unrecognized argument: --online
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/11. 29.10.20_Selenium/Sel1/gl-base-camp-2021 (skryvenko-hw1-merge-conflict)
+$ git log --oneline --decorate --graph --all
+*   e4136af (HEAD -> skryvenko-hw1-merge-conflict) edited readme file after merging
+|\
+| * 9d41e9d (skryvenko-hw1-merge-conflict2) changed readme file before merge
+| * 20995c7 (main) change readme file
+* | 0cfe4ba change readme file before merge
+|/
+| * 060ed72 (origin/skryvenko-hw4-selenium-python) added homework4 project using Python
+|/
+| * ec69555 (origin/skryvenko-hw4-selenium-js) added homework4 project using JS and WebdriverIO
+| * 0ac5f59 modified .gitignore under JS
+|/
+| * 8f1e763 (origin/skryvenko-hw4-selenium-java) added homework4 project using Java
+| * 23a951f modified .gitignore under java
+|/
+| * 12dcece (origin/skryvenko-hw3-linux) HW3 - linux commands
+|/
+| * 94c5111 (origin/sergii-kryvenko-branch) added homework_22.10.20 file
+|/
+* d8555b4 (origin/main, origin/HEAD) Initial commit
+
+Serg@DESKTOP-2900DIS MINGW64 /e/Project_Ser/Java/Automation/GlobalLogic/GL Test Automation BaseCamp - 10.2020/11. 29.10.20_Selenium/Sel1/gl-base-camp-2021 (skryvenko-hw1-merge-conflict)
