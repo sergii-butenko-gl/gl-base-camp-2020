@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="GLTA-BaseCamp2020_Selenium_TestSuite">
+<suite name="GLTA-BaseCamp2020_Selenium_TestSuite_HW5">
 
 	<!-- 3 ERROR 5 WARNING 7 INFO 9 TRACE -->
-	<test name="Search Random Word" verbose="2">
+	<test name="Search Some text" verbose="7">
 		<classes>
-			<!-- Search one random word in google -->
-			<class name="home.kryvenkosergii.SeleniumSimpleProject.ui.test.Test1">
-				<methods>
-					<include name="search" />
-				</methods>
+			<class
+				name="home.kryvenkosergii.SeleniumSimpleProject.ui.test.Test1">
+				<!-- <methods> <include name="searchSeleniumText" /> </methods> -->
 			</class>
-			<class name="home.kryvenkosergii.SeleniumSimpleProject.ui.test.Test2"/>
+			<class
+				name="home.kryvenkosergii.SeleniumSimpleProject.ui.test.Test2">
+			</class>
 		</classes>
 	</test> <!-- Test -->
 

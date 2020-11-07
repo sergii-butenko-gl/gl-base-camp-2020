@@ -1,9 +1,7 @@
 package home.kryvenkosergii.SeleniumSimpleProject.ui.data;
 
-import home.kryvenkosergii.SeleniumSimpleProject.ui.tools.Randomizer;
-
 /**
- * DataRepository class which holds different sets of data. 
+ * DataRepository class which holds different sets of data.
  * @author SergiiK
  */
 public final class DataRepository {
@@ -23,28 +21,12 @@ public final class DataRepository {
         return instance;
     }
 
-    public SearchData getDefault() {
-        return oneRandomLetterSearchData();
-    }
-
-    /**
-     * Default search a random word (one random letter).
-     * @return SearchData class.
-     */
-    public SearchData oneRandomLetterSearchData() {
-        return new SearchData(Randomizer.getRamdomStringLetters1(1));
-    }
-    
-    /**
-     * Search a random word (20 letter).
-     * @return SearchData class.
-     */
-    public SearchData oneRandomWordSearchData() {
-        return new SearchData(Randomizer.getRamdomString20Letters());
-    }
-    
     public SearchData seleniumInstallUbuntuPythonSearch() {
         return new SearchData("selenium install ubuntu python");
     }
     
+    public SearchData qaSearch() {
+        return new SearchData("QA");
+    }
+
 }

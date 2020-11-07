@@ -13,6 +13,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -42,16 +43,18 @@ public abstract class TestRunner {
 
 	@AfterClass(alwaysRun = true)
 	public void tearDownAfterClass() throws Exception {
-	    presentationSleep(1);
+	    presentationSleep();
 		if (driver != null) {
 			driver.quit();
 		}
 	}
 
+//	@Parameters(value = "url")
 	@BeforeMethod
 	public void setUp() throws Exception {
-		driver.get("https://google.com");
-		presentationSleep(); // For Presentation Only
+//		driver.get("https://google.com");
+//	    driver.get(url);
+//		presentationSleep(); // For Presentation Only
 	}
 
 	@AfterMethod
