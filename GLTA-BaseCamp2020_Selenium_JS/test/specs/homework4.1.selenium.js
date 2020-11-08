@@ -1,7 +1,7 @@
 const assert = require('assert');
-const googlePage = require('../page.google/start.page.google');
-const projectSeleniumPypiPage = require('../page.pupi.org/project.selenium.page.pupi.org');
-const searchResultsPypiPage = require('../page.pupi.org/search.results.page.pupi.org');
+const googlePage = require('../page_object/page.google/start.page.google');
+const projectSeleniumPypiPage = require('../page_object/page.pupi.org/project.selenium.page.pupi.org');
+const searchResultsPypiPage = require('../page_object/page.pupi.org/search.results.page.pupi.org');
 
 describe('Homework 4.1 : search some test using google and pypi.org', () => {
     //
@@ -19,9 +19,10 @@ describe('Homework 4.1 : search some test using google and pypi.org', () => {
         const numberOfResult = 2;
         projectSeleniumPypiPage.setValueInSearchField(searchText);
         projectSeleniumPypiPage.clickToStartSearch();
-        let text = searchResultsPypiPage.getTextResult(numberOfResult);
+        const actualResult = searchResultsPypiPage.getTextResult(numberOfResult);
+        const expectedResult = 'amazon-selenium';
         console.log("----------------------Result Homework 4.1 : " + text);
-        assert.strictEqual(text.includes('amazon-selenium'), true, "Error: the result doesn't match as expected");
+        assert.strictEqual(actualResult.includes(expectedResult), true, "Error: the result doesn't match as expected");
         // browser.pause(3000);
     })
 })
