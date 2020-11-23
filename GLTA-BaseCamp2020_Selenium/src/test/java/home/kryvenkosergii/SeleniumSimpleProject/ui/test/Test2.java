@@ -1,10 +1,15 @@
 package home.kryvenkosergii.SeleniumSimpleProject.ui.test;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import home.kryvenkosergii.SeleniumSimpleProject.ui.data.ConfigFile;
 import home.kryvenkosergii.SeleniumSimpleProject.ui.data.DataRepository;
 import home.kryvenkosergii.SeleniumSimpleProject.ui.data.SearchData;
 import home.kryvenkosergii.SeleniumSimpleProject.ui.page.CareerSearchGLPage;
@@ -35,14 +40,26 @@ public class Test2 extends TestRunner {
     @Story(value = "Make a search request using a sentence.")
     @Parameters("searchQA")
     @Test(dataProvider = "searchText")
-    public void searchQAtext(SearchData word) {
+    public void searchQAtext(SearchData testData) {
+        //
+        Properties props = new Properties();
+        try {
+            props.load(new FileInputStream("src/test/java/some.properties"));
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        String errorMessage = props.getProperty("unexpected.message");
+        System.out.println("error message = " + errorMessage);
+        //
 
-        driver.get("https://www.globallogic.com/ua/careers/");
-        logger.info("start search with " + word.getSearchText());
-        CareerSearchGLPage careerSearchGLPage = new CareersGLPage(driver).searchText(word.getSearchText());
-        String expected = "Senior QA Automation engineer IRC103517";
+        driver.get(new ConfigFile().getURL_Globallogic_careers());
+        logger.info("start search with " + testData.getSearchText());
+        CareerSearchGLPage careerSearchGLPage = new CareersGLPage(driver).searchText(testData.getSearchText());
+        String expected = testData.getExpectedResult();
         String actual = careerSearchGLPage.getTextOfResultByNumberInListResults(1);
         System.out.println("result = " + actual);
-        Assert.assertTrue(actual.contains(expected), "test is failed");
+        System.out.println("expected = " + expected);
+        Assert.assertTrue(actual.contains(expected), errorMessage);
     }
 }

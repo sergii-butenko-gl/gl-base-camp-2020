@@ -22,11 +22,11 @@ public final class DataRepository {
     }
 
     public SearchData seleniumInstallUbuntuPythonSearch() {
-        return new SearchData("selenium install ubuntu python");
+        return new SearchData("selenium install ubuntu python", "Selenium-Screenshot");
     }
     
     public SearchData qaSearch() {
-        return new SearchData("QA");
+        return new SearchData("QA", "Senior QA Automation Engineer IRC104438");
     }
 
 }

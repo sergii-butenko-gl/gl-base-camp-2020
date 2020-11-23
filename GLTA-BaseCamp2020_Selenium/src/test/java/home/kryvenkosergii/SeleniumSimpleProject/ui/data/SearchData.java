@@ -5,14 +5,17 @@ package home.kryvenkosergii.SeleniumSimpleProject.ui.data;
  * @author SergiiK
  */
 public class SearchData {
-    
+
     private String searchText;
+
+    private String expectedResult;
 
     /**
      * Default constructor.
      */
     public SearchData() {
         this.searchText = "";
+        this.expectedResult = "";
     }
 
     /**
@@ -21,6 +24,17 @@ public class SearchData {
      */
     public SearchData(String searchText) {
         this.searchText = searchText;
+        this.expectedResult = "";
+    }
+
+    /**
+     * Constructor with two entered parameters.
+     * @param searchText String
+     * @param expectedResult String
+     */
+    public SearchData(String searchText, String expectedResult) {
+        this.searchText = searchText;
+        this.expectedResult = expectedResult;
     }
 
     /**
@@ -39,9 +53,21 @@ public class SearchData {
         this.searchText = searchText;
     }
 
+    public String getExpectedResult() {
+        return expectedResult;
+    }
+
+    /**
+     * Setting an expected result.
+     * @param expectedResult String
+     */
+    public void setExpectedResult(String expectedResult) {
+        this.expectedResult = expectedResult;
+    }
+
     @Override
     public String toString() {
-        return "SearchData [searchText=" + searchText + "]";
+        return "SearchData [searchText=" + searchText + ", expectedResult=" + expectedResult + "]";
     }
-    
+
 }

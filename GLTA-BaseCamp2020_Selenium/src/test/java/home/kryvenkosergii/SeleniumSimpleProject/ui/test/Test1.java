@@ -5,6 +5,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import home.kryvenkosergii.SeleniumSimpleProject.ui.data.ConfigFile;
 import home.kryvenkosergii.SeleniumSimpleProject.ui.data.DataRepository;
 import home.kryvenkosergii.SeleniumSimpleProject.ui.data.SearchData;
 import home.kryvenkosergii.SeleniumSimpleProject.ui.page.MainGooglePage;
@@ -37,15 +38,15 @@ public class Test1 extends TestRunner {
     @Story(value = "Make a search request using a sentence.")
     @Parameters("searchSelenium")
     @Test(dataProvider = "searchText")
-    public void searchSeleniumText(SearchData word) {
-        driver.get("https://google.com");
-        logger.info("start search with " + word.getSearchText());
-        ProjectSeleniumPypiOrgPage pypiOrgProjectSeleniumPage = new MainGooglePage(driver).searchText(word.getSearchText())
+    public void searchSeleniumText(SearchData testData) {
+        driver.get(new ConfigFile().getURL_Google());
+        logger.info("start search with " + testData.getSearchText());
+        ProjectSeleniumPypiOrgPage pypiOrgProjectSeleniumPage = new MainGooglePage(driver).searchText(testData.getSearchText())
                 .searchNeededLinkAndClick();
         SearchPypiOrgPage pypiOrgSearchPage = pypiOrgProjectSeleniumPage.searchText("selenium");
 
         String actual = pypiOrgSearchPage.getTextOfResultByNumberInListResults(2);
-        String expected = "Selenium-Screenshot";
+        String expected = testData.getExpectedResult();
         System.out.println("result = " + actual);
         Assert.assertTrue(actual.contains(expected), "test is failed");
     }
