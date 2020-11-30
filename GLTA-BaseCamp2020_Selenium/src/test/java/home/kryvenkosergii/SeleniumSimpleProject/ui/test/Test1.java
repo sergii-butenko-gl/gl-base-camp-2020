@@ -9,7 +9,7 @@ import home.kryvenkosergii.SeleniumSimpleProject.ui.data.ConfigFile;
 import home.kryvenkosergii.SeleniumSimpleProject.ui.data.DataRepository;
 import home.kryvenkosergii.SeleniumSimpleProject.ui.data.SearchData;
 import home.kryvenkosergii.SeleniumSimpleProject.ui.page.MainGooglePage;
-import home.kryvenkosergii.SeleniumSimpleProject.ui.page.ProjectSeleniumPypiOrgPage;
+import home.kryvenkosergii.SeleniumSimpleProject.ui.page.PypiOrgPage;
 import home.kryvenkosergii.SeleniumSimpleProject.ui.page.SearchPypiOrgPage;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -41,7 +41,7 @@ public class Test1 extends TestRunner {
     public void searchSeleniumText(SearchData testData) {
         driver.get(new ConfigFile().getURL_Google());
         logger.info("start search with " + testData.getSearchText());
-        ProjectSeleniumPypiOrgPage pypiOrgProjectSeleniumPage = new MainGooglePage(driver).searchText(testData.getSearchText())
+        PypiOrgPage pypiOrgProjectSeleniumPage = new MainGooglePage(driver).searchText(testData.getSearchText())
                 .searchNeededLinkAndClick();
         SearchPypiOrgPage pypiOrgSearchPage = pypiOrgProjectSeleniumPage.searchText("selenium");
 

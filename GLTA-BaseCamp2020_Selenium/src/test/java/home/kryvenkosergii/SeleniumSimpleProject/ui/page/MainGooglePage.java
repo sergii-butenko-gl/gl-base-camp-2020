@@ -81,11 +81,11 @@ public class MainGooglePage extends BaseSearchPage {
      * @param path
      * @return PypiOrgProjectSeleniumPage class.
      */
-    public ProjectSeleniumPypiOrgPage searchNeededLinkAndClick() {
+    public PypiOrgPage searchNeededLinkAndClick() {
         String link = "pypi.org";
         if (isDisplayedSearchResults()) {
             getLinkByPath(link).click();
         }
-        return new ProjectSeleniumPypiOrgPage(driver);
+        return new PypiOrgPage(driver);
     }
 }
