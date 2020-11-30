@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="GLTA-BaseCamp2020_REST_SmokeTest">
+
+	<!-- 3 ERROR 5 WARNING 7 INFO 9 TRACE -->
+	<test name="SmokeTest" verbose="7">
+		<classes>
+			<class
+				name="com.kryvenkosergii.GLTA_BaseCamp2020_REST.tests.OkHttpRestTest">
+				<methods>
+					<include name="postHttpRequestUserCreation" />
+					<include name="putHttpRequestUserUpdating" />
+					<!-- <include name="getHttpRequestListOfUsers" /> -->  <!-- not working -->
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+
+</suite> <!-- Suite -->
