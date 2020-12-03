@@ -15,13 +15,13 @@ class BasePage:
         # self.driver.implicitly_wait(10)
         self.driver.get(url)
 
-    def find_element_by_selector(self, selector):
+    def get_webelement_by_selector(self, selector):
         if self.waitUntil_presence_of_element(selector, 10):
             return self.driver.find_element(*selector)
         else:
             return None
 
-    def find_elements_list(self, selector):
+    def get_webelements_list_by_selector(self, selector):
         if self.waitUntil_presence_of_all_elements(selector, 5):
             return self.driver.find_elements(*selector)
         else:
@@ -29,46 +29,46 @@ class BasePage:
 
     def click_to_element(self, selector):
         if self.waitUntil_element_to_be_clickable(selector, 5):
-            self.find_element_by_selector(selector).click()
+            self.get_webelement_by_selector(selector).click()
 
     def click_to_button_or_submit(self, selector):
         if self.waitUntil_element_to_be_clickable(*selector, 5):
-            self.find_element_by_selector(selector).send_keys(Keys.RETURN)
+            self.get_webelement_by_selector(selector).send_keys(Keys.RETURN)
 
-    def input_text_in_field(self, selector, text_for_input):
-        while (self.check_if_input_text_displayed_in_field(selector, text_for_input) is not True):
-            self.find_element_by_selector(selector).send_keys(text_for_input)
+    def set_text_in_field(self, selector, text_for_input):
+        while (self.isDisplayedText(selector, text_for_input) is not True):
+            self.get_webelement_by_selector(selector).send_keys(text_for_input)
 
-    def check_if_input_text_displayed_in_field(self, selector, text_to_check):
-        actual_result = self.find_element_by_selector(
+    def isDisplayedText(self, selector, text_to_check):
+        actual_result = self.get_webelement_by_selector(
             selector).get_attribute("value")
         expected_result = text_to_check
         return str(actual_result) == expected_result
 
-    def check_if_displayed_more_than_zero_results(self, selector):
-        actual_result = len(self.find_elements_list(selector))
+    def isDisplayed_more_than_zero_results(self, selector):
+        actual_result = len(self.get_webelements_list_by_selector(selector))
         return actual_result > 0
 
     def clear_field(self, selector):
         # self.find_element(selector).clear()
-        self.find_element_by_selector(selector).sendKeys(Keys.CONTROL + "a")
-        self.find_element_by_selector(selector).sendKeys(Keys.DELETE)
+        self.get_webelement_by_selector(selector).sendKeys(Keys.CONTROL + "a")
+        self.get_webelement_by_selector(selector).sendKeys(Keys.DELETE)
 
     def get_text_from_element(self, selector):
         if self.waitUntil_presence_of_element(selector, 2):
-            return str(self.find_element_by_selector(selector).text)
+            return str(self.get_webelement_by_selector(selector).text)
         else:
             return "text not found"
 
     def input_text_in_field_and_click_submit(self, selectorForField, text_for_input, selectorForButtonSubmit, enter=False):
-        self.input_text_in_field(selectorForField, text_for_input)
+        self.set_text_in_field(selectorForField, text_for_input)
         if enter is not True:
             self.click_to_element(selectorForButtonSubmit)
         else:
             self.click_to_button_or_submit(selectorForButtonSubmit)
 
     def scroll_to_webelement(self, selector):
-        element = self.find_element_by_selector(selector)
+        element = self.get_webelement_by_selector(selector)
         self.driver.execute_script("arguments[0].scrollIntoView();", element)
 
     def waitUntil_presence_of_element(self, selector, time_sec_to_wait):
@@ -127,6 +127,7 @@ class GLCareersPage(BasePage):
     def search_vacancy(self, vacancy):
         self.input_text_in_field_and_click_submit(
             GLCareersPage.SEARCH_FIELD, vacancy, GLCareersPage.SEARCH_BUTTON)
+        return GLCareersResultPage(driver)
 
 
 class GLCareersResultPage(BasePage):
@@ -159,9 +160,8 @@ driver = webdriver.Chrome('/home/serge/Desktop/tmp/chromedriver')
 
 careersPage = GLCareersPage(driver)
 careersPage.open()
-careersPage.search_vacancy('QA')
+careerResults = careersPage.search_vacancy('QA')
 
-careerResults = GLCareersResultPage(driver)
 careerResults.printNumberOfResultsFoundAndKeyword()
 print(careerResults.getFirstResult())
 driver.close()
